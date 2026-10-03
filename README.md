@@ -13,17 +13,19 @@ Aplicación de escritorio en **C# (Windows Forms)** que gestiona el proceso de v
 
 ## Requisitos
 
-- Windows 10 u 11
-- SDK de .NET 10
-- Visual Studio 2026 con la carga de trabajo **"Desarrollo de escritorio con .NET"** (el proyecto usa el formato de solución `.slnx`)
+- Windows 10 u 11 (64 bits)
+- Para usar el programa compilado: [.NET 10 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/10.0)
+- Para compilar desde el código fuente: SDK de .NET 10 y Visual Studio 2026 con la carga de trabajo **"Desarrollo de escritorio con .NET"** (el proyecto usa el formato de solución `.slnx`)
 
 ## Instalación y ejecución
 
-### Opción 1: Instalador
+### Opción 1: Programa ya compilado
 
-1. Descarga el paquete de instalación de [liga o sección de Releases].
-2. Ejecuta `[nombre del instalador]` y sigue los pasos.
-3. Abre **SDVE** desde el menú de inicio.
+1. Instala el [.NET 10 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/10.0) (solo la primera vez).
+2. Descomprime `SDVE_Instalacion.zip` en cualquier carpeta.
+3. Ejecuta `Miniproyecto1.exe`.
+
+Si Windows muestra "Windows protegió su PC", haz clic en **Más información** y luego en **Ejecutar de todas formas**.
 
 ### Opción 2: Compilar desde el código fuente
 
@@ -32,9 +34,15 @@ git clone https://github.com/eligonzalezg09/SDVE.git
 cd SDVE
 ```
 
-1. Abre `Miniproyecto1.slnx` en Visual Studio.
+1. Abre `Miniproyecto1.slnx` (o `Miniproyecto1.csproj`) en Visual Studio.
 2. Espera a que se restauren las dependencias.
 3. Selecciona la configuración **Debug** o **Release** y presiona **F5** para ejecutar.
+
+Para generar el programa compilado desde la terminal:
+
+```bash
+dotnet publish -c Release -r win-x64 --self-contained false -p:SatelliteResourceLanguages=en -o publicado_ligero
+```
 
 ## Uso básico
 

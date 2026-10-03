@@ -5,14 +5,14 @@ namespace Miniproyecto1
 {
     public partial class FormVotacion : Form
     {
-        // Datos del alumno.
+    // Datos de los alumnos 
         private string idAlumno;
         private string nombreAlumno;
         private string grupoAlumno;
         private string carreraAlumno;
         private string centroAlumno;
 
-        // Convocatorias seleccionadas.
+        
         private bool sociedadSeleccionada;
         private bool consejoSeleccionado;
         private bool representantesSeleccionado;

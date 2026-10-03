@@ -104,7 +104,7 @@ namespace Miniproyecto1
                 return;
             }
 
-            // Abre la papeleta de votación.
+           // Abre la papeleta de las votaciones
             FormVotacion votacion = new FormVotacion(
      TBID.Text.Trim(),
      TBNombre.Text.Trim(),
